@@ -1,0 +1,18 @@
+{
+  "name": "react-server-components-slides-react-conf",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.42.5",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.1.52",
+    "@iconify-json/uim": "^1.1.5"
+  }
+}
