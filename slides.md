@@ -232,7 +232,7 @@ layout: statement
 transition: slide-left
 layout: center
 ---
-<img src="img_1.png" style="height: 400px;"/>
+<img src="/img_1.png" style="height: 400px;"/>
 
 ---
 transition: slide-left
