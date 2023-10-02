@@ -9,7 +9,7 @@
     <img
         height="90"
         width="120"
-        src="reactConfIndia.png"
+        src="/reactConfIndia.png"
         alt="Img"/>
   </footer>
 
