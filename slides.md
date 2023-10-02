@@ -6,11 +6,16 @@ highlighter: shiki
 drawings:
   persist: false
 transition: slide-left
-title: React Server Components
+title: RSC Slides
 layout: fact
+favicon: 'https://www.reactindia.io/favicons/favicon.ico'
 ---
 
 # React Server Components
+
+<div class="next">
+  The next paradigm
+</div>
 
 <span class="author">
     Shaswat Prabhat | <carbon-logo-github/> ShaswatPrabhat | <carbon-logo-twitter/>@ShaswatPrabhat | <img width="25" height="25" style="display:inline-block; align: center;" src="https://play-lh.googleusercontent.com/G6jK9S77RN0laf9_6nhDo3AVxbRP9SgMmt8ZmQjKQ2hibn9xhOY-W5YFn_7stJD1CA=w480-h960">scavengerhere
@@ -25,6 +30,12 @@ p{
   font-size: 20px;
   margin-top: 10%;
 }
+.next {
+ font-size: 60px;
+ font-weight: 500;
+ text-decoration: underline;
+ margin-bottom: 20px;
+}
 </style>
 
 
@@ -32,328 +43,91 @@ p{
 transition: slide-left
 layout: statement
 ---
-
-# Story-time
-
-<v-click>
-
-## A restaurant experience
-
-</v-click>
----
-transition: slide-left
-layout: two-cols
----
-
-<v-click>
-
-# Experience 1
-
-</v-click>
-
-
-<v-click>
-
-1. Arrive at table
-2. Place the order
-
-</v-click>
-
-<v-click>
-
-3. Watch the Chef cook the food  
-</v-click>
-
-<v-click>
-
-  <p  style="font-size: 25px;">3a. Watch the Chef peel onions...<br/></p>
-</v-click>
-<v-click>
-
-  <p  style="font-size: 25px;">3b. Watch the Chef dice carrots...<br/></p>
-</v-click>
-<v-click>
-
-   <span class="animate-ping" style="font-size:36px">...</span>
-
-</v-click>
-
-<v-click>
-
-4. Get served food
-
-</v-click>
-
-
-
-::right::
-
-<v-click>
-
-# Experience 2
-
-</v-click>
-
-
-<v-click>
-
-1. Arrive at table
-2. Place the order
-
-</v-click>
-
-<v-click>
-
-3. Scroll a feed on your phone   
-
-</v-click>
-
-<v-click>
-
-<p  style="font-size: 25px;">3a. Switch apps ...<br/></p>
-
-</v-click>
-
-<v-click>
-
-<p  style="font-size: 25px;">3b. Repeat 3 ...<br/></p>
-
-</v-click>
-
-<v-click>
-
-<span class="animate-ping" style="font-size:36px">...</span>
-
-</v-click>
-
-<v-click>
-
-4. Get served food
-
-</v-click>
-
-
----
-transition: slide-left
-layout: center
----
-
-# What if ?
-
-<v-click>
-
-1. Arrive at table
-2. Place the order
-
-</v-click>
-
-<v-click>
-
-3. Watch the chef prepare your food
-
-</v-click>
-
-<v-click>
-
-<p  style="font-size: 25px;">3a. A fast shiny spectacle...<br/></p>
-
-</v-click>
-
-<v-click>
-
-<p  style="font-size: 25px;">3b. Hypnotized by the speed!<br/></p>
-
-</v-click>
-
-<v-click>
-
-<span class="animate-ping" style="font-size:36px">...</span>
-
-</v-click>
-
-<v-click>
-
-4. Get served food
-
-</v-click>
-
----
-transition: slide-left
----
-
-<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-top: 10%; width: 100%">
-<img src="https://qph.cf2.quoracdn.net/main-qimg-02d26ca27d5f671dda41c0434aae5a1b" style="width:60%"/>
-
-<div style="margin-left: 30px;display: flex; flex-direction: column; max-width: 50%;">
-
-<h1 style="font-size: 55px; font-weight:400; line-height: 80px;">Welcome </h1>
-<h1 style="font-size: 55px; font-weight:400; line-height: 80px;">React Server Components</h1>
-</div>
-</div>
----
-layout: two-cols
-transition: slide-left
----
-
 # Aims
 What this talk will cover:
 <br/>
 <v-click>
 
-### 1. Mental Model 
+## 1. When - The history?
 <br/>
 <br/>
 </v-click>
 <v-click>
 
-### 2. Motivation
+## 2. Why - The motivation?
 <br/>
 <br/>
 </v-click>
 <v-click>
 
-### 3. Re-understand "Server"
+## 3. How - The mechanics?
 <br/>
 <br/>
 </v-click>
 
-::right::
-
-<v-click>
-
-# Anti-Aims
-What this talk will not cover:
-<br/>
-</v-click>
-<v-click>
-
-### 1. Comparison of landscape
-<br/>
-<br/>
-</v-click>
-<v-click>
-
-### 2. Infrastructure and Setup
-<br/>
-<br/>
-</v-click>
-<v-click>
-
-### 3. Framework implementations
-<br/>
-<br/>
-</v-click>
 
 ---
 transition: slide-left
+layout: statement
 ---
 
-# A super quick vocabulary check
-  <br/> 
+# When?
 
-* <carbon-logo-react /> React - A client-side library for components based Web Application 
-  <br/>  <br/>
-* <carbon-connection-two-way /> State - Intelligent variables
-  <br/>  <br/>
-* <carbon-laptop /> CSR - Client side Rendering
-    <br/>  <br/>
-* <carbon-bare-metal-server /> SSR - Server side Rendering
+<v-click>
+<div class="video">
+<iframe width="900" height="350" src="https://www.youtube.com/embed/TQQPAU21ZUw" title="Data Fetching with React Server Components" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+</v-click>
+
+<style>
+.video {
+ display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-item:center;
+}
+</style>
+
+---
+transition: slide-left
+layout: statement
+---
+
+# Why?
+<br/>
+<v-click>
+
+## 1. Data Fetching 
+<br/>
+<br/>
+</v-click>
+<v-click>
+
+## 2. Performance
+<br/>
+<br/>
+</v-click>
+<v-click>
+
+## 3. User Experience
+<br/>
+<br/>
+</v-click>
 
 ---
 transition: slide-left
 layout: fact
 ---
 
-# Network Chasm and attention deficit
-Lesser time available to grab user's attention
+# "Server Components are rendered only on the Server"
 
----
-transition: slide-left
----
-
-# Path to Server Components - I
-<img 
-height="640"
-width="640"
-src="https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fthinking-in-server-components.png&w=3840&q=75&dpl=dpl_9ban2Vw5rf63ZAqeHHQT5v4nYHuz">
-* Page divided into Interactive and non-interactive components
-* What can we do after having segregated this?
-<p style="font-size:12px; color: aqua"><mdi-alert-box /> Several ideas span from the above - including Micro front-ends, Islands Architecture etc</p>
----
-transition: slide-left
----
-
-# Path to Server Components - II
-<img height="600"
-width="600"
-src="https://s42821.pcdn.co/wp-content/uploads/2022/07/Image-AWS-Edge-Network@2x.png">
-* Rise of "Edge runtimes" - deploy closer to the user
-* The network chasm between Client and Server is decreasing
-<p style="font-size:12px; color: aqua"><mdi-alert-box /> Almost all layers of the OSI stack are becoming faster and scalabale </p>
----
-transition: slide-left
----
-
-# Path to Server Components - III
-  <br/>
-
-* <mdi-connection /> The database, services and browsers are quickly becoming more connected
-  <br/>  <br/>
-* <mdi-server-remove /> While Client-Server Architecture is still relevant, we might need to <u>unlearn</u> some of the concepts
-  <br/>  <br/>
-* <mdi-speedometer /> Our applications need to be ready to deliver content at scale and at speed
-  <br/>  <br/>
----
-transition: slide-left
-layout: statement
----
-
-# <mdi-transit-connection-variant /> All of these ideas converge into RSC
----
-transition: slide-left
-layout: fact
----
-
-# Parsing the RFC
-Some phrases from the Request For Comments and their intent
-
----
-transition: slide-left
-layout: statement
----
-# "Spanning the client and the server"
-
----
-transition: slide-left
-layout: statement
----
-# "Incrementally Stream rendered data"
-
----
-transition: slide-left
-layout: statement
----
-# "...additional endpoints to power their UI"
-
-<br/>
-
-# "Easier to avoid <u>client-server</u> Network waterfall"
-
----
-transition: slide-left
-layout: statement
----
-# "Top level awaits"
----
-transition: slide-left
-layout: statement
----
-# A quick example <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f525/512.gif" alt="🔥" width="70" height="70" style="display:inline-block; align: center; margin-bottom: 20px">
 ---
 lineNumbers: true
 transition: slide-left
 ---
-```ts  {all|2|4|9|16-19|16-19,4|16-19,4,7}{lines:true}
+# Data fetching
+
+```ts  {all|1|2,9|2,9,13,14|16-19}{lines:true}
 // Note.js - Server Component
 import db from 'db';
 // We import from NoteEditor.js - a Client Component.
@@ -381,14 +155,19 @@ async function Note(props) {
 transition: slide-left
 layout: statement
 ---
-# Thinner bundles sent to the Client
+# "Thinner bundles sent to the Client"
 
 ---
 lineNumbers: true
 transition: slide-left
-layout: center
+layout: full
 ---
-```ts  {all}{lines:true}
+# Performance
+
+<v-click>
+
+```ts  {all|2|3|2,3}{lines:true}
+// NoteWithMarkdown.js - Server Component
 import marked from 'marked'; // 35.9K (11.2K gzipped)
 import sanitizeHtml from 'sanitize-html'; // 206K (63.3K gzipped)
 
@@ -397,158 +176,125 @@ function NoteWithMarkdown({text}) {
     return (/* render */);
 }
 ```
-
----
-transition: slide-left
-layout: statement
----
-# Rendering of a Server Component
-
----
-transition: slide-left
-layout: default
----
-# Rendering of a Server Component - I
-  <br/>  <br/>
-<v-click>
-
-1. Browser triggers a request
-
-</v-click>
-<v-click>
-<br/>  <br/>
-
-2. Server Component begins to render on the server
-
-</v-click>
-<v-click>
-<br/>  <br/>
-
-3. If it contains more Server components these get rendered to pure `html`: `<div/>`s `<span/>`s etc.
-
-</v-click>
----
-transition: slide-left
-layout: statement
----
-# What about the Client components?
-
----
-transition: slide-left
-layout: default
----
-# Rendering of a Server Component - II
-  <br/>  <br/>
-<v-click>
-
-4. Client components  need to be rendered on the browser
-
-</v-click>
-<v-click>
-<br/>  <br/>
-
-5. These are replaced by <u>placeholders</u> on the Server
-
-</v-click>
-<v-click>
-<br/>  <br/>
-
-6. And then sent to the Browser
-
-</v-click>
----
-transition: slide-left
-layout: statement
----
-# And then sent to the Browser as pure HTML right?
-
----
-transition: slide-left
-layout: default
----
-# Rendering of a Server Component - III
-  <br/>  <br/>
-<v-click>
-
-7. Over the wire we get a <u>JSON stream</u> that React understands
-
-</v-click>
-<v-click>
-<br/>  <br/>
-
-8. Browser replaces the placeholder with Client rendered components
-
-</v-click>
-<v-click>
-
-<br/>  <br/>
-
-9. Page is ready with Client + Server Components <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f525/512.gif" alt="🔥" width="60" height="60" style="display:inline-block; align: center; margin-bottom: 20px">
-
-</v-click>
-
-<v-click>
-
-<p style="font-size:12px; color: aqua"><mdi-alert-box /> There are active parts played the Server, the Bundler and Caching in this flow</p>
-
 </v-click>
 
 ---
 transition: slide-left
 layout: statement
 ---
-# Puzzles
+# How?
+
+<br/>
+<v-click>
+
+## 1. Server and Client have become one entity(?)
+<br/>
+<br/>
+</v-click>
+<v-click>
+
+## 2. RSC is an architecture, a specification
+<br/>
+<br/>
+</v-click>
 
 ---
 transition: slide-left
-layout: default
+layout: fact
 ---
-# Open Questions ( and some answers )...
-
+# RSC vs 
+---
+transition: slide-left
+layout: statement
+---
+# RSC vs Client-Side Components
+<br/>
 <v-click>
 
-* Should we migrate all our apps to RSC?
-
-</v-click><v-click>
-
-* How do we handle routing?
-
-</v-click>
-
-<v-click>
-
-* How much of the implementation is dependent on frameworks?
-
+## 1. No Client Side hooks will work on Server Components
+<br/>
+<br/>
 </v-click>
 <v-click>
 
-* Will co-locating code add more complexity and security issues?
-
-</v-click>
-
-<v-click>
-
-* What role will bundlers play?
-
+## 2. Client Components cannot import Server Components
+<br/>
+<br/>
 </v-click>
 <v-click>
 
-* What about SSR?
-
+## 3. Client and Server components can be inter-leaved
+<br/>
+<br/>
 </v-click>
+
+---
+transition: slide-left
+layout: center
+---
+<img src="img_1.png" style="height: 400px;"/>
 
 ---
 transition: slide-left
 layout: statement
 ---
-# Open to audience!
-<br/> <br/>
+# RSC vs SSR
+<br/>
+<v-click>
+
+## 1. HTML is not what is sent over the wire
+<br/>
+<br/>
+</v-click>
+<v-click>
+
+## 2. Both are solutions to different problems
+
+<br/>
+<br/>
+</v-click>
+<v-click>
+
+## 3. Serialization and Streaming of data is possible
+
+<br/>
+<br/>
+</v-click>
+
+
+
+---
+transition: slide-left
+layout: statement
+---
+# RSC vs (Remix/Next/Hydrogen...)
+<br/>
+<v-click>
+
+## 1. Remember it is a specification!
+<br/>
+<br/>
+</v-click>
+<v-click>
+
+## 2. The ROUTER becomes even more powerful
+<br/>
+<br/>
+</v-click>
+<v-click>
+
+## 3. Different implementations based out of the frameworks
+<br/>
+<br/>
+</v-click>
+
 ---
 transition: slide-left
 layout: statement
 ---
 # Thank you!
+## Open to audience!
 
-<img src="/mypicture.jpeg" style="width:20%; margin-left: 40%; margin-bottom: 40px"/>
+<img src="/mypicture.jpeg" style="width:20%; margin-left: 40%; margin-bottom: 50px; margin-top:10px;"/>
 
-#### Shaswat Prabhat | <carbon-logo-github/> ShaswatPrabhat | <carbon-logo-twitter/>@ShaswatPrabhat | <img width="25" height="25" style="display:inline-block; align: center;" src="https://play-lh.googleusercontent.com/G6jK9S77RN0laf9_6nhDo3AVxbRP9SgMmt8ZmQjKQ2hibn9xhOY-W5YFn_7stJD1CA=w480-h960">scavengerhere
+### <carbon-logo-github/> ShaswatPrabhat | <carbon-logo-twitter/>@ShaswatPrabhat | <img width="25" height="25" style="display:inline-block; align: center;" src="https://play-lh.googleusercontent.com/G6jK9S77RN0laf9_6nhDo3AVxbRP9SgMmt8ZmQjKQ2hibn9xhOY-W5YFn_7stJD1CA=w480-h960">scavengerhere
