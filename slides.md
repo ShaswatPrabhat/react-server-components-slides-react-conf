@@ -127,7 +127,7 @@ transition: slide-left
 ---
 # Data fetching
 
-```ts  {all|1|2,9|2,9,13,14|16-19}{lines:true}
+```ts  {all|1|2,9|2,9,13,14}{lines:true}
 // Note.js - Server Component
 import db from 'db';
 // We import from NoteEditor.js - a Client Component.
@@ -234,6 +234,37 @@ layout: center
 ---
 <img src="/img_1.png" style="height: 400px;"/>
 
+
+---
+lineNumbers: true
+transition: slide-left
+---
+# Interleaving of Client and Server Components
+
+```ts  {all|3,4|6|16-19}{lines:true}
+// Note.js - Server Component
+import db from 'db';
+// We import from NoteEditor.js - a Client Component.
+import NoteEditor from 'NoteEditor';
+
+async function Note(props) {
+    const {id, isEditing} = props;
+// Can directly access server data sources during render, e.g. databases
+    const note = await db.posts.get(id);
+
+    return (
+        <div>
+            <h1>{note.title}</h1>
+        <section>{note.body}</section>
+    {/* Dynamically render the editor only if necessary */}
+    {isEditing
+        ? <NoteEditor note={note} />
+    : null
+    }
+    </div>
+);
+}
+```
 ---
 transition: slide-left
 layout: statement
