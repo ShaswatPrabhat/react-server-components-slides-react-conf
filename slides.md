@@ -308,7 +308,7 @@ layout: statement
 </v-click>
 <v-click>
 
-## 2. The ROUTER becomes even more powerful
+## 2. Router and Bundler are vital players
 <br/>
 <br/>
 </v-click>
@@ -318,6 +318,24 @@ layout: statement
 <br/>
 <br/>
 </v-click>
+
+---
+transition: slide-left
+layout: full
+---
+# Resources
+<br/>
+
+* ## [https://www.plasmic.app/blog/how-react-server-components-work](https://www.plasmic.app/blog/how-react-server-components-work)
+<br/>
+
+* ## [https://www.joshwcomeau.com/react/server-components/](https://www.joshwcomeau.com/react/server-components/)
+<br/>
+
+* ## [https://github.com/reactwg/server-components/discussions/5](https://github.com/reactwg/server-components/discussions/5)
+<br/>
+
+* ## [https://youtu.be/F83wMYl9GWM](https://youtu.be/F83wMYl9GWM)
 
 ---
 transition: slide-left
